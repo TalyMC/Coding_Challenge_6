@@ -16,4 +16,22 @@ let calculateSalesTax = function(amount, taxRate) {
 console.log (`Sales Tax: $${calculateSalesTax(100, 0.07)}`)//Sales Tax $7
 console.log (`Sales Tax: $${calculateSalesTax(500, 0.1)}`)//Sales Tax $50
 
-//Task 3: 
+//Task 3: Arrow Function
+let calculateBonus = (salary, performanceRating) => {
+    let bonus;
+    if (performanceRating === "Excellent") {
+        bonus = salary * 0.2; //"Excellent" rating gets a 20% bonus
+    }
+    else if (performanceRating === "Good"){
+        bonus = salary * 0.1; // "Good" rating gets a 10% bonus
+    }
+    else if (performanceRating === "Average") {
+        bonus = salary * 0.05; //"Average" rating gets a 5% bonus
+    }
+    return bonus;
+};// functioon for calculating bounses
+
+console.log(`Bonus: $${calculateBonus(5000, "Excellent")}`) //Bonus $1000
+console.log(`Bonus: $${calculateBonus(7000, "Good")}`) //Bonus $700
+
+//Task 4: Parameters and Arguments
