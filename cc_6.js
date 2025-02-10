@@ -83,3 +83,11 @@ console.log(tracker(200));//output $200
 console.log(tracker(150));//output $150
 
 //Task 8: Recursion in JavaScript
+function calculateYearsToPromotion(employeeLevel) {
+    if (employeeLevel >= 10) {
+        return "Years to Level 10: 0";
+    }
+   else return `Years to Level 10: ${(10 - employeeLevel) * 2}`;//2 years
+};// funtion to determine how many years to get a promotion
+console.log(calculateYearsToPromotion(7));
+console.log(calculateYearsToPromotion(5))
