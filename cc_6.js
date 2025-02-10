@@ -66,8 +66,20 @@ console.log(`Convert Amount: $${convertCurrency(250, 0.85)}`)//converted amount 
 let orders = [200, 600, 1200, 450, 800];
 function applyBulkDiscount(orders, discountFunction) {
     return orders.map(discountFunction);
-};
+};//function to determine bulk discount
 let discountFunction = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
 console.log (discountFunction) //Output: 200, 540, 1080, 450, 720
 
 //Task 7 Closures
+function createExpenseTracker() {
+    let totalExpenses = 0;
+    return function(expense) {
+        totalExpenses += expense
+        return totalExpenses
+    };
+};//function to add expenses and keep running total
+let tracker = createExpenseTracker();
+console.log(tracker(200));//output $200
+console.log(tracker(150));//output $150
+
+//Task 8: Recursion in JavaScript
